@@ -14,7 +14,6 @@
         min-height: 215px;
         max-height: 215px;
     }
-
     @include mediaNetbook {
         max-height: 180px;
         min-height: 180px;
@@ -71,7 +70,6 @@
 
 .place__description {
     @include resetUl;
-
 }
 
 .description__item  {
@@ -99,20 +97,17 @@
             font-size: 20px;
             line-height: 23px;
         }
-
         &_via-tech {
             font-size: 16px;
             line-height: 19px;
         } 
     }
-
     @include mediaNetbook {
         &_tour-kind {
             font-size: 18px;
             line-height: 21px;
         }
     }
-
     @include mediaTablet{
         &_tour-kind {
             font-size: 16px;
