@@ -1,0 +1,122 @@
+@import '../../variables';
+@import '../../mixins';
+
+.place__image {
+    width: 100%;
+    min-height: 285px;
+    max-height: 285px;
+    object-fit: cover;
+    overflow: hidden;
+
+    margin-bottom: 25px;
+
+    @include mediaPc {
+        min-height: 215px;
+        max-height: 215px;
+    }
+
+    @include mediaNetbook {
+        max-height: 180px;
+        min-height: 180px;
+    }
+}
+
+.place__heading {
+    position: relative;
+
+    margin: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    text-transform: uppercase;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    color: $text-color-dark;
+    font-size: 32px;
+    line-height: 35px;
+    letter-spacing: 5px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left:0;
+
+        height: 2px;
+        width: 300px;
+        background-color: $dark-red;
+    }
+
+    @include mediaPc {
+        font-size: 28px;
+        line-height: 31px;
+        letter-spacing: 3px;
+
+        &::after {
+            width: 150px;
+        }
+    }
+    @include mediaNetbook{
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 3px;
+    }
+
+    @include mediaTablet{
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 5px;
+    }
+}
+
+.place__description {
+    @include resetUl;
+
+}
+
+.description__item  {
+    font-family: $font-family;
+    font-weight: 100;
+    margin-bottom: 10px;
+
+    &:nth-last-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    &_tour-kind {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    &_via-tech {
+        font-size: 18px;
+        line-height: 21px;
+    }
+    
+
+    @include mediaPc {
+        &_tour-kind {
+            font-size: 20px;
+            line-height: 23px;
+        }
+
+        &_via-tech {
+            font-size: 16px;
+            line-height: 19px;
+        } 
+    }
+
+    @include mediaNetbook {
+        &_tour-kind {
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+
+    @include mediaTablet{
+        &_tour-kind {
+            font-size: 16px;
+            line-height: 19px;
+        }
+    }
+}

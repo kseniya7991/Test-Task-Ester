@@ -1,13 +1,43 @@
 @import './variables';
+@import './components/heading/heading.scss';
+@import './components/place/place.scss';
+@import './components/places/places.scss';
 
 html {
     font-family: $font-family;
+    font-weight: 300;
     -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
     -webkit-tap-highlight-color: transparent;
 }
 
 body {
-    margin: 0;
+    margin: 0 auto;
     max-width: $breakpoint-pc;
     min-width: $breakpoint-mobile;
+}
+
+main {
+    margin: 0 auto;
+    padding: 140px 240px;
+    box-sizing: border-box;
+    max-width: $breakpoint-pc;
+
+    @include mediaPc {
+        max-width: $breakpoint-netbook;
+        padding: 70px 20px;
+    }
+
+    @include mediaNetbook {
+        max-width: $breakpoint-tablet;
+        padding: 60px 20px;
+    }
+
+    @include mediaTablet{
+        max-width: $breakpoint-mobile;
+        padding: 42px 20px;
+    }
+
+    @include mediaMobile{
+        width: $breakpoint-mobile;
+    }
 }

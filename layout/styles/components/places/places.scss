@@ -1,0 +1,57 @@
+@import '../../variables';
+@import '../../mixins';
+
+.places__list {
+    @include resetUl;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+
+    grid-column-gap: 60px;
+    grid-row-gap: 75px;
+
+    @include mediaPc {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    
+        grid-column-gap: 108px;
+        grid-row-gap: 60px;
+        padding: 0 108px;
+    }
+
+    @include mediaNetbook{
+        grid-column-gap: 56px;
+        grid-row-gap: 40px;
+        padding: 0 56px;
+    }
+
+    @include mediaTablet {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        padding: 0 50px;
+    }
+
+}
+
+.places__item {
+    width: 440px;
+    height: 424px;
+
+    display: flex;
+    flex-direction: column;
+
+    @include mediaPc {
+        width: 330px;
+        height: 345px;
+    }
+
+    @include mediaNetbook{
+        width: 280px;
+        height: 301px;
+    }
+
+    @include mediaTablet{
+        width: 280px;
+        height: 295px;
+    }
+}

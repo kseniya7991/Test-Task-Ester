@@ -1,0 +1,47 @@
+@import '../../variables';
+@import '../../mixins';
+
+.heading {
+    position: relative;
+    padding-bottom: 29px;
+    margin: 0;
+    margin-bottom: 75px;
+
+    font-size: 80px;
+    line-height: 90px;
+    font-family: $font-family-heading;
+    font-weight: 300;
+    color: $font-gold;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        height: 3px;
+        width: 100%;
+
+        background-color: $dark-red;
+    }
+
+    @include mediaPc {
+        font-size: 50px;
+        line-height: 75px;
+        padding-bottom: 24px;
+        margin-bottom: 60px;
+    }
+    @include mediaNetbook {
+        font-size: 40px;
+        line-height: 60px;
+        padding-bottom: 24px;
+        margin-bottom: 40px;
+    }
+    @include mediaTablet{
+        font-size: 28px;
+        line-height: 40px;
+    }
+   
+}
